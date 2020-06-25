@@ -1,7 +1,7 @@
 # php-7.4-alpine
 Docker image with php-7.4-alpine
 
-All image contain following php extension and composer.
+All image contain following php extension graphviz and composer.
 
 - bcmath
 - gd
