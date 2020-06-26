@@ -23,7 +23,6 @@ RUN set -ex; \
 	apk add --no-cache \
         imagemagick gettext \
         wkhtmltopdf \
-        graphviz \
         freetype \
         ttf-dejavu \
         ttf-droid \
