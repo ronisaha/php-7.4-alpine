@@ -1,4 +1,4 @@
-FROM php:7.4.21-fpm-alpine3.13
+FROM php:7.4.21-fpm-alpine
 
 MAINTAINER Roni Kumar Saha <roni.csed@gmail.com>
 
@@ -27,8 +27,7 @@ RUN set -ex; \
         ttf-dejavu \
         ttf-droid \
         ttf-freefont \
-        ttf-liberation \
-        ttf-ubuntu-font-family; \
+        ttf-liberation; \
     update-ms-fonts; \
     fc-cache -f; \
 	pecl install imagick; \
