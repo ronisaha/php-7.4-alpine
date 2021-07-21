@@ -1,4 +1,4 @@
-FROM php:7.4.12-cli-alpine
+FROM php:7.4.21-cli-alpine
 
 MAINTAINER Roni Kumar Saha <roni.csed@gmail.com>
 
@@ -19,7 +19,7 @@ RUN set -ex; \
 	; \
 	\
 	apk add --no-cache \
-        imagemagick gettext nodejs nodejs-npm; \
+        imagemagick gettext nodejs npm; \
 	pecl install imagick; \
 	pecl install apcu; \
 	pecl install yaml; \

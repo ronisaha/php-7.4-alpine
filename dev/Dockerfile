@@ -1,4 +1,4 @@
-FROM php:7.4.9-fpm-alpine
+FROM php:7.4.21-fpm-alpine3.13
 
 MAINTAINER Roni Kumar Saha <roni.csed@gmail.com>
 
@@ -90,5 +90,5 @@ RUN curl -sS https://getcomposer.org/installer | php &&\
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
 #Replace with patched QT build
-COPY --from=madnight/docker-alpine-wkhtmltopdf:latest /bin/wkhtmltopdf /usr/bin/wkhtmltopdf
+COPY --from=registry.hub.docker.com/ronisaha/wkhtmltopdf-qt-alpine-3.12 /usr/bin/wkhtmltopdf /usr/bin/wkhtmltopdf
 
