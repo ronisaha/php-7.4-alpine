@@ -83,9 +83,7 @@ RUN { \
             echo 'rlimit_core = unlimited'; \
     } >> /usr/local/etc/php-fpm.d/zz-docker.conf
 
-RUN curl -sS https://getcomposer.org/installer | php &&\
-    chmod +x composer.phar &&\
-    mv composer.phar /usr/local/bin/composer
+COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
